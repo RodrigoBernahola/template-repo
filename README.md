@@ -113,13 +113,6 @@ Configurado con:
 4. **Revisar código**: `npm run lint`
 5. **Build producción**: `npm run build`
 
-## 🤝 Contribuir
-
-1. Fork del proyecto
-2. Crear rama feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit cambios (`git commit -am 'Agrega nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Crear Pull Request
 
 ## 📄 Licencia
 

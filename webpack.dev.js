@@ -6,6 +6,6 @@ export default merge(common, {
   devtool: "eval-source-map", // Un source-map más rápido para desarrollo
   devServer: {
     open: true,
-    watchFiles: [".src/template.html"],
+    watchFiles: ["./src/template.html"],
   },
 });

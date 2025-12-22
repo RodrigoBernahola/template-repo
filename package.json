@@ -1,7 +1,7 @@
 {
-  "name": "practica-npm-config",
+  "name": "template repository",
   "version": "1.0.0",
-  "description": "Una practica simple para aplicar conceptos",
+  "description": "Un repositorio cuyo proposito es servir como template",
   "main": "index.js",
   "type": "module",
   "scripts": {

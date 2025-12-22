@@ -16,8 +16,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-console.log("pepe");
-
-console.log("pepepepepepe");
-
 export { saludar };
