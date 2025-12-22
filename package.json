@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Una practica simple para aplicar conceptos",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:src": "eslint src/",

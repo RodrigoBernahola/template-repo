@@ -1,5 +1,5 @@
-# Archivos y carpetas a ignorar por Prettier
-
+Para mantener consistencia:
+```
 # Código generado por webpack
 dist/
 
@@ -18,3 +18,7 @@ yarn.lock
 
 # Logs
 *.log
+
+# Archivos temporales
+.tmp/
+temp/
