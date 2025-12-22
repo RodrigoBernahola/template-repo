@@ -1,5 +1,4 @@
 import "./styles.css";
-import { greeting } from "./greeting.js";
 
 // Función de ejemplo
 const saludar = (nombre) => {
@@ -16,8 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     saludar("Mundo");
   }
 });
-
-console.log(greeting);
 
 console.log("pepe");
 
