@@ -32,16 +32,19 @@ npm install
 ## 🎯 Comandos disponibles
 
 ### Desarrollo
+
 ```bash
 npm run dev           # Inicia servidor de desarrollo en http://localhost:8080
 ```
 
 ### Producción
+
 ```bash
 npm run build         # Genera build optimizado en carpeta dist/
 ```
 
 ### Calidad de código
+
 ```bash
 npm run lint          # Analiza todo el código con ESLint
 npm run lint:fix      # Corrige errores automáticamente
@@ -50,6 +53,7 @@ npm run lint:src:fix  # Corrige errores solo en src/
 ```
 
 ### Formateo
+
 ```bash
 npm run format        # Formatea todo el código con Prettier
 npm run format:check  # Verifica formato sin modificar
@@ -79,18 +83,23 @@ proyecto/
 ## 🔧 Configuración
 
 ### Webpack
+
 - `webpack.common.js`: Configuración base compartida
 - `webpack.dev.js`: Modo desarrollo con source maps
 - `webpack.prod.js`: Modo producción con optimizaciones
 
 ### ESLint
+
 Configurado con:
+
 - Reglas recomendadas de ESLint
 - Integración con Prettier
 - Soporte para ES2024
 
 ### Prettier
+
 Configurado con:
+
 - Punto y coma al final
 - Comillas simples
 - 80 caracteres por línea

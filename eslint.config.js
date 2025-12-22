@@ -3,78 +3,35 @@ import prettierPlugin from "eslint-plugin-prettier";
 import prettierConfig from "eslint-config-prettier";
 
 export default [
-  // Configuración base recomendada de ESLint
   js.configs.recommended,
+  prettierConfig, // Desactiva reglas que chocan con Prettier
 
-  //(archivos a ignorar)
   {
-    ignores: [
-      "dist/**",
-      "node_modules/**",
-      "*.min.js",
-      "coverage/**",
-      ".tmp/**",
-      "temp/**",
-    ],
+    ignores: ["dist/**", "node_modules/**", "*.min.js"],
   },
 
-  // Configuración para archivos de código fuente (ES modules)
   {
-    files: ["src/**/*.js"],
+    files: ["**/*.js"],
     languageOptions: {
       ecmaVersion: 2024,
+      sourceType: "module",
       globals: {
-        // Variables globales del navegador
+        // Definimos manualmente las globales de navegador y Node
+        // NOTA: NO agregamos __dirname ni __filename porque en ESM no son globales.
         window: "readonly",
         document: "readonly",
         console: "readonly",
-      },
-    },
-    plugins: {
-      prettier: prettierPlugin,
-    },
-    rules: {
-      // Reglas básicas de ESLint
-      "no-unused-vars": "error",
-      "no-debugger": "error",
-
-      // Ejecutar Prettier como regla de ESLint
-      "prettier/prettier": "error",
-    },
-  },
-
-  // Configuración específica para archivos de configuración (CommonJS)
-  {
-    files: ["webpack.config.js", "webpack.*.js", "*.config.js"],
-    languageOptions: {
-      ecmaVersion: 2024,
-      sourceType: "commonjs",
-      globals: {
-        // Variables globales de Node.js
-        __dirname: "readonly",
-        __filename: "readonly",
-        exports: "writable",
-        module: "writable",
-        require: "readonly",
         process: "readonly",
-        Buffer: "readonly",
-        global: "readonly",
       },
     },
     plugins: {
       prettier: prettierPlugin,
     },
     rules: {
-      // Reglas más relajadas para archivos de configuración
-      "no-console": "off",
-      "no-unused-vars": "error",
-
-      // Ejecutar Prettier como regla de ESLint
       "prettier/prettier": "error",
+      "no-unused-vars": "warn", // Cambiado a warn para ser menos agresivo en desarrollo
+      "no-console": "off",
+      "no-debugger": "warn",
     },
   },
-
-  // Aplicar la configuración de prettier (debe ir al final)
-  // Esto desactiva las reglas de ESLint que pueden conflictuar con Prettier
-  prettierConfig,
 ];
