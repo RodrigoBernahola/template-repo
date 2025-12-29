@@ -1,11 +1,14 @@
 import { merge } from "webpack-merge";
 import common from "./webpack.common.js";
+import ESLintPlugin from "eslint-webpack-plugin";
 
 export default merge(common, {
-  mode: "development", // Cambiado de production a development
-  devtool: "eval-source-map", // Un source-map más rápido para desarrollo
-  devServer: {
-    open: true,
-    watchFiles: ["./src/template.html"],
-  },
+  mode: "production",
+  devtool: "source-map",
+  plugins: [
+    new ESLintPlugin({
+      failOnError: true, // Bloquea el build si hay errores
+      failOnWarning: false,
+    }),
+  ],
 });
