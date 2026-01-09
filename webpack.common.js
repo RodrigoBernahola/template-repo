@@ -16,7 +16,6 @@ export default {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
-    // ESLint solo en producción (se agrega en webpack.prod.js)
   ],
   module: {
     rules: [
